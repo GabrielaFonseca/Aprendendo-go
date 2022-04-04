@@ -38,7 +38,7 @@ Podendo então ser executável na maquina/servidor, onde o programa escrito real
 
 Para traduzir o codigo que escrevemos para o linguagem de maquina, usamos o `build`.
 
-Para compilar um programa em Go `go build main.go`
+Compilar um programa em Go `go build main.go` usando a versão da arquitetura atual:
 
 ```
 go build main.go
@@ -49,4 +49,33 @@ main
 Aprendendo GO
 ```
 
+Compilando para diferentes arquitetura.
+
+Windows:
+`GOOS=windows GOARCH=amd64 go build main.go`
+
+Linux:
+`GOOS=linux GOARCH=amd64 go build main.go`
+
+MacOS
+
+- Intel/Amd
+
+```
+64-bit | GOOS=darwin GOARCH=amd64 go build -o app-amd64-darwin app.go
+32-bit | GOOS=darwin GOARCH=386 go build -o app-386-darwin app.go
+```
+
+    ```GOOS=darwin GOARCH=amd64 go build main.go```
+
+- m1
+
 Onde irá gerar um binario compilado `main.go`
+
+## Go env
+
+## Go test
+
+É a ferramenta de teste do Go atra'ves de uma biblioteca padrão.
+
+É preciso ter um arquvo main.go para compilar o codigo
